@@ -31,7 +31,7 @@ try{
 ╰──────────●●►
 
 ╭──────────●●►
-│ *Hello , I am KIRA MD!!*
+│ *Hello , I am Kaif MD!!*
 ╰──────────●●►
 
 ${bot.COPYRIGHT}`
@@ -87,7 +87,7 @@ let aliveText =`👋 *HI*, *${pushname}* *I Am Alive Now*
 🔢 *Reply below number*
   
 1 │❯❯◦ COMMANDS MENU
-2 │❯❯◦ KIRA-MD SPEED
+2 │❯❯◦ Kaif-MD SPEED
   
 ${bot.COPYRIGHT}`;
 
@@ -149,7 +149,7 @@ function startAutoBio(conn) {
         await conn.updateProfileStatus(bioText);  // Update the bot's bio
     }, 60 * 1000);  // 1 minute interval
 }
-console.log(`KIRA-MD ♻ Auto Bio Started`);
+console.log(`Kaif-MD ♻ Auto Bio Started`);
 //============================ Env=======================================================
 function isEnabled(value) {
 return value && value.toString().toLowerCase() === "true";
@@ -165,7 +165,7 @@ cmd({
 async (conn, mek, m, { from, contextInfo, reply }) => {
     try {
         // Define the settings message with the correct boolean checks
-        let envSettings = `╭━━━〔 *KIRA-MD-ENV* 〕━━━┈⊷
+        let envSettings = `╭━━━〔 *Kaif-MD-ENV* 〕━━━┈⊷
 ┃▸╭───────────
 ┃▸┃๏ *𝔼ℕ𝕍 𝕊𝔼𝕋𝕋𝕀ℕ𝔾𝕊 📡*
 ┃▸└───────────···๏
@@ -315,7 +315,7 @@ async (conn, mek, m, { from, pushname, reply, contextInfo }) => {
     try {
         let desc = `
 🤩 *HELLOW* *${pushname}*
-> WELLCOME TO KIRA-MD 🪀
+> WELLCOME TO Kaif-MD 🪀
 
 ╭─「 ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ 」
 │👤 *\`User\`*: ${pushname}
@@ -644,9 +644,9 @@ cmd({
 async (conn, mek, m, { from }) => {
     try {
         // Owner's contact info
-        const ownerNumber = '+923237045919'; // Replace this with the actual owner number
-        const ownerName = 'ArslanMD Official'; // Replace this with the owner's name
-        const organization = 'KIRA CODERS'; // Optional: replace with the owner's organization
+        const ownerNumber = '+923466859436'; // Replace this with the actual owner number
+        const ownerName = 'Kaif Official'; // Replace this with the owner's name
+        const organization = 'WasixKaif CODERS'; // Optional: replace with the owner's organization
 
         // Create a vCard (contact card) for the owner
         const vcard = 'BEGIN:VCARD\n' +
@@ -691,7 +691,7 @@ cmd({
 async(conn, mek, m,{from, l, reply}) => {
 try{
     var inital = new Date().getTime();
-    let ping = await conn.sendMessage(from , { text: '*_KIRA-MD..._*'  }, { quoted: mek } )
+    let ping = await conn.sendMessage(from , { text: '*_Kaif-MD..._*'  }, { quoted: mek } )
     var final = new Date().getTime();
     await conn.sendMessage(from, { delete: ping.key })
         return await conn.sendMessage(from , { text: '*🔥Pong*\n *' + (final - inital) + ' ms* '  }, { quoted: mek } )
@@ -721,7 +721,7 @@ cmd({
 *|* ⚡ ᴍꜱ: 0ms
 *|* 🔁 ᴛᴇꜱᴛɪɴɢ...
 ╰━━━━━━━━━━━━━━━━━━⊷
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʀꜱʟᴀɴ-ᴍᴅ` 
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ Kaif-MD` 
     }, { quoted: m });
     
     // 🔄 UPDATE INTERVAL
@@ -740,7 +740,7 @@ cmd({
   elapsedTime < 10 ? " 📡 ᴍᴇᴀꜱᴜʀɪɴɢ..." : 
   elapsedTime < 15 ? " ⚡ ᴄᴀʟᴄᴜʟᴀᴛɪɴɢ..." : 
   elapsedTime < 20 ? " 📊 ᴀɴᴀʟʏᴢɪɴɢ..." : 
-  " ✅ ★彡[ᴄᴏᴍᴘʟᴇᴛᴇ ɪɴ]彡★ " + (30 - elapsedTime) + "s"}\n╰━━━━━━━━━━━━━━━━━━⊷\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʀꜱʟᴀɴ-ᴍᴅ`;
+  " ✅ ★彡[ᴄᴏᴍᴘʟᴇᴛᴇ ɪɴ]彡★ " + (30 - elapsedTime) + "s"}\n╰━━━━━━━━━━━━━━━━━━⊷\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ Kaif-MD`;
       
       try {
         await conn.sendMessage(from, {
@@ -916,7 +916,7 @@ cmd({
 
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let dec = `> KIRA-MD REPO INFO 🪀
+let dec = `> Kaif-MD REPO INFO 🪀
 
 ╭⦁⦂⦁*━┉━┉━┉━┉━┉━┉━⦁⦂⦁
 ┃ 𝙾𝚆𝙽𝙴𝚁 𝙽𝚄𝙼𝙱𝙴𝚁: ${bot.OWNER_NUMBER}
@@ -1118,7 +1118,7 @@ let status = `
 ┃
 ┃⚙ *Platform :-* ${os.hostname()}
 ┃
-┃ 👨‍💻  *Owners :-* ArslanMD Official 🇵🇰 
+┃ 👨‍💻  *Owners :-* Kaif-MD Official 🇵🇰 
 ┃
 ┃ 🧬 *Version :-* ${bot.VERSION}
 ┃
