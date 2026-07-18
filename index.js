@@ -14,7 +14,7 @@ const axios = require('axios');
 const path = require('path');
 
 // Owner numbers
-const ownerNumber = ["923237045919"];
+const ownerNumber = ["923466859436"];
 
 // ==================== LOCAL FILES LOADER ====================
 function loadLocalFiles() {
@@ -73,8 +73,8 @@ if (!fs.existsSync(CREDS)) {
   }
   
   let session = config.SESSION_ID.trim();
-  if (!session.includes("KIRA-MD~")) {
-    console.log("❌ Invalid KIRA-MD session format");
+  if (!session.includes("Kaif-MD~")) {
+    console.log("❌ Invalid Kaif-MD session format");
     process.exit(1);
   }
   
@@ -83,7 +83,7 @@ if (!fs.existsSync(CREDS)) {
   
   fs.mkdirSync(AUTH_DIR, { recursive: true });
   fs.writeFileSync(CREDS, decoded, { encoding: 'utf8' });
-  console.log("♻️ KIRA-MD session restored successfully");
+  console.log("♻️ Kaif-MD session restored successfully");
 }
 
 // Load group settings from file if exists
@@ -128,7 +128,7 @@ app.get('/', (req, res) => {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>KIRA-MD Bot</title>
+        <title>Kaif-MD Bot</title>
         <style>
           body { font-family: Arial; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); text-align: center; padding: 50px; color: white; }
           .container { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; }
@@ -138,10 +138,10 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <div class="container">
-          <h1>🤖 KIRA-MD</h1>
+          <h1>🤖 Kaif-MD</h1>
           <p class="status">✅ BOT IS CONNECTED</p>
           <p>Type .menu in WhatsApp to see commands</p>
-          <p>Owner: ${config.OWNER_NAME || 'ARSLAN'}</p>
+          <p>Owner: ${config.OWNER_NAME || 'Kaif'}</p>
         </div>
       </body>
       </html>
@@ -149,7 +149,7 @@ app.get('/', (req, res) => {
   }
 });
 
-app.get('/lib/arslan.html', (req, res) => {
+app.get('/lib/kaif.html', (req, res) => {
   res.redirect('/');
 });
 
@@ -161,7 +161,7 @@ async function getProfilePicture(sock, jid) {
     const ppUrl = await sock.profilePictureUrl(jid, 'image');
     return ppUrl;
   } catch {
-    return 'https://n.uguu.se/BlGoHUJU.jpg'; // Default image
+    return 'https://files.catbox.moe/qhcwb6.png'; // Default image
   }
 }
 
@@ -170,7 +170,7 @@ async function connectToWA() {
   console.log("✅ Using local lib and plugins only");
   
   const prefix = config.PREFIX || '.';
-  console.log(`🤖 KIRA-MD Connecting with prefix: "${prefix}"`);
+  console.log(`🤖 Kaif-MD Connecting with prefix: "${prefix}"`);
   
   const { state: authState, saveCreds: saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/');
   
@@ -222,7 +222,7 @@ async function connectToWA() {
         connectToWA();
       }
     } else if (connection === 'open') {
-      console.log("✅ KIRA-MD Bot connected to WhatsApp!");
+      console.log("✅ Kaif-MD Bot connected to WhatsApp!");
       
       // Load plugins
       console.log("🔌 Loading plugins...");
@@ -242,14 +242,14 @@ async function connectToWA() {
       console.log(`✅ Plugins loaded: ${loadedCount}/${pluginFiles.length}`);
       
       // Send connection message with image
-      const aliveMsg = `*╭──────────────●●►*\n> *KIRA-MD CONNECTED SUCCESSFULLY*\n\n> *Type ${prefix}menu to view commands*  \n\n*╭⊱✫ KIRA MD ✫⊱╮*\n*│✫📂 Bot Name: ${botConfig.BOT_NAME}*\n*│✫🛡️ Owner: ${config.OWNER_NAME}*\n*│✫♻️ Prefix: ${prefix}*\n*│✫🌍 Mode: ${config.MODE}*\n*│✫⏰ Uptime: ${runtime(process.uptime())}*\n*╰──────────────●●►*\n\n> Enjoy Using KIRA MD`;
+      const aliveMsg = `*╭──────────────●●►*\n> *Kaif-MD CONNECTED SUCCESSFULLY*\n\n> *Type ${prefix}menu to view commands*  \n\n*╭⊱✫ Kaif MD ✫⊱╮*\n*│✫📂 Bot Name: ${botConfig.BOT_NAME}*\n*│✫🛡️ Owner: ${config.OWNER_NAME}*\n*│✫♻️ Prefix: ${prefix}*\n*│✫🌍 Mode: ${config.MODE}*\n*│✫⏰ Uptime: ${runtime(process.uptime())}*\n*╰──────────────●●►*\n\n> Enjoy Using Kaif MD`;
       
       // Image URL for connection message
-      const imageUrl = 'https://n.uguu.se/BlGoHUJU.jpg';
+      const imageUrl = 'https://files.catbox.moe/qhcwb6.png';
       
       try {
         // Send to owner with image
-        sock.sendMessage(ownerNumber[0] + '923237045919@s.whatsapp.net', {
+        sock.sendMessage(ownerNumber[0] + '923466859436@s.whatsapp.net', {
           image: { url: imageUrl },
           caption: aliveMsg
         }).catch(() => {
@@ -274,7 +274,7 @@ async function connectToWA() {
   });
 
   // Anti-call feature
-  const callMsg = `⚠️ *ANTI-CALL IS ACTIVE* ⚠️\n\nDear User,\n\nYou have attempted to call the bot. To ensure uninterrupted service, please refrain from calling.\n\nThank you for your understanding.\n\n${botConfig.COPYRIGHT || 'KIRA-MD'}`;
+  const callMsg = `⚠️ *ANTI-CALL IS ACTIVE* ⚠️\n\nDear User,\n\nYou have attempted to call the bot. To ensure uninterrupted service, please refrain from calling.\n\nThank you for your understanding.\n\n${botConfig.COPYRIGHT || 'Kaif-MD'}`;
   
   sock.ev.on('call', async (calls) => {
     if (config.ANTI_CALL === 'true') {
@@ -890,4 +890,4 @@ setTimeout(() => {
   connectToWA();
 }, 4000);
 
-// BOT SALLERS KI MKC
+// Kaif Md Official
