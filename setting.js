@@ -5,11 +5,11 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-// Add Your Session Id Start With KIRA-MD Hear
+// Add Your Session Id Start With Kaif-MD Hear
 SESSION_ID: process.env.SESSION_ID || "",
-// KIRA MD Api Site Url
+// Kaif MD Api Site Url
 API_BASE: process.env.API_BASE || "https://arslan-apis.vercel.app/",
-// KIRA MD Api Key -- Add This To Your Api Key Form Api Site
+// Kaif MD Api Key -- Add This To Your Api Key Form Api Site
 API_KEY: process.env.API_KEY || "arslanmdofficialadmin",
 // Auto Status Seen
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
@@ -18,7 +18,7 @@ AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
 // make true if you want auto reply on status 
 AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
 // make true if you want auto reply on status 
-AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY KIRA-MD 🤍*",
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY Kaif-MD 🤍*",
 
 AUTO_BIO: process.env.AUTO_BIO || "true",
 // true if want welcome msg in groups
@@ -27,10 +27,10 @@ GOODBYE: process.env.GOODBYE || "false",
 ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
 PREFIX: process.env.PREFIX || ".",
-// add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "KIRA-MD",
+// add your prefix for bot   
+BOT_NAME: process.env.BOT_NAME || "Kaif-MD",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "KIRA-MD",
+STICKER_NAME: process.env.STICKER_NAME || "Kaif-MD",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -38,9 +38,9 @@ CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️�
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
-OWNER_NUMBER: process.env.OWNER_NUMBER || "923237045919",
+OWNER_NUMBER: process.env.OWNER_NUMBER || "923466859436",
 // add your bot owner number
-OWNER_NAME: process.env.OWNER_NAME || "ArslanMD Official",
+OWNER_NAME: process.env.OWNER_NAME || "Kaif x Chaudhary Official",
 
 SEND_WELCOME: process.env.SEND_WELCOME || "true",
 // add alive msg here 
@@ -73,7 +73,7 @@ AUTO_TYPING: process.env.AUTO_TYPING || "true",
 // true for automatic show typing   
 READ_CMD: process.env.READ_CMD || "false",
 // true if want mark commands as read 
-DEV: process.env.DEV || "923237045919",
+DEV: process.env.DEV || "92323466859436",
 //replace with your whatsapp number        
 ANTI_VV: process.env.ANTI_VV || "true",
 
@@ -82,7 +82,7 @@ ANTI_BOT: process.env.ANTI_BOT || "true",
 
 ANTI_DELETE: process.env.ANTI_DELETE || "true",
 // true for anti delete 
-ANTI_DELETE_TYPE: process.env.ANTI_DELETE_TYPE || "same", 
+ANTI_DELETE_TYPE: process.env.ANTI_DELETE_TYPE || "inbox", 
 // change it to 'same' if you want to resend deleted message in same chat 
 AUTO_RECORDING: process.env.AUTO_RECORDING || "true",
 // make it true for auto recoding 
