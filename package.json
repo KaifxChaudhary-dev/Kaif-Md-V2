@@ -1,12 +1,12 @@
 {
-  "name": "kira-md",
+  "name": "kaif-md",
   "version": "9.0.0",
-  "description": "KIRA-MD WhatsApp bot created by ArslanMD Official",
+  "description": "Kaif-MD WhatsApp bot created by Kaif Official",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name KIRA-MD",
-    "stop": "pm2 stop KIRA-MD",
-    "restart": "pm2 restart KIRA-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Kaif-MD",
+    "stop": "pm2 stop Kaif-MD",
+    "restart": "pm2 restart Kaif-MD"
   },
   "dependencies": {
     "@dark-yasiya/news-scrap": "latest",
